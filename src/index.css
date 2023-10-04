@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind utilities;
+
+:root {
+  --primary-color: #edf8ff;
+}
+
+[type="text"]:focus,
+[type="email"]:focus,
+[type="url"]:focus,
+[type="password"]:focus,
+[type="number"]:focus,
+[type="date"]:focus,
+[type="search"]:focus,
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.react-datepicker-wrapper .react-datepicker__input-container input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0px;
+}
+
+.react-datepicker__day.react-datepicker__day--keyboard-selected {
+  background: none;
+  color: black;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  --tw-ring-offset-width: none !important;
+}
+
+li:focus-visible {
+  outline: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.tab-panel--selected {
+  animation-name: tabPanel;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes tabPanel {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Input style */
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  position: absolute;
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.input-container input {
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.ps-menu-icon {
+  width: unset !important;
+  min-width: unset !important;
+  justify-content: start !important;
+  margin: 0 !important;
+}
+
+.ps-menu-button,
+.ps-menu-icon {
+  height: unset !important;
+}
+
+.ps-menu-button:hover {
+  background-color: unset !important;
+}
+
+.ps-sidebar-container,
+.ps-submenu-content {
+  background-color: transparent !important;
+}
+
+.ps-collapsed .ps-menu-icon {
+  min-width: 100% !important;
+  justify-content: center !important;
+}
+
+.ps-collapsed {
+  width: 80px !important;
+}
+
+.ps-sidebar-container,
+.ps-menu-root,
+.ps-menu-root > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ps-sidebar-root {
+  min-width: unset !important;
+  border: none !important;
+}
+
+.ps-collapsed,
+.ps-collapsed .ps-menu-root,
+.ps-collapsed .ps-menu-button {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+
+.ps-collapsed ul {
+  align-items: center;
+}
+
+.ps-menu-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.borderdiv {
+  border: 1px solid #4299e1;
+  height: 1.4rem;
+  width: 1.4rem;
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  color: #4299e1;
+}
+
+.custom-circle :hover {
+  background-color: #4299e1;
+  height: 1.41rem;
+  margin: auto;
+  border-radius: 50%;
+  width: 1.4rem;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.topback:hover {
+  background-color: #4299e1;
+  color: #fff;
+}
+
+.topback-select {
+  background-color: #4299e1;
+  color: #fff;
+}
+
+.custom-circle-select {
+  background-color: #4299e1;
+  height: 1.41rem;
+  margin: auto;
+  border-radius: 50%;
+  width: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ihover :hover {
+  color: #4299e1;
+}
+@keyframes spinRight {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spinLeft {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+
+.custom-cursor {
+  cursor: url("/images/cursor.svg"), auto;
+}
+.edit-cursor {
+  cursor: url("/images/edit.svg"), auto;
+}
+
+/* modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  width: 100%;
+}
+#swal2-title {
+  color: #000000;
+}
+.swal2-popup {
+  background: transparent;
+}
+
+.swal2-html-container,
+.swal2-title {
+  color: #fff;
+}
